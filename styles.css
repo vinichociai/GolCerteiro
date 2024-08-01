@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+/* Aplica a fonte Bebas Neue para a descrição na navbar */
+.nav-ebook a {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px; /* Ajuste o tamanho conforme necessário */
+  color: #ffd700; /* Cor dourada para maior impacto */
+  text-shadow: 1px 1px 2px black; /* Sombra para melhorar a legibilidade sobre imagens claras */
+}
+
+/* Aplica a fonte Raleway para a descrição abaixo da imagem */
+.tagline2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px; /* Aumenta o tamanho da fonte para melhor legibilidade */
+  font-weight: 700; /* Negrito para mais destaque */
+  color: white;
+  text-align: center; /* Centraliza o texto */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fundo semi-transparente para melhor contraste */
+  padding: 10px; /* Preenchimento para estética */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #000000;
+  padding: 7px;
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #000; /* Fundo preto */
+  width: 100%; /* Ocupa toda a largura */
+  z-index: 1000;
+}
+
+.faster-one {
+  font-family: "Faster One", cursive;
+  font-size: 35px;
+  line-height: 1;
+  vertical-align: middle;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.faster-one:hover {
+  transform: scale(1.1) rotate(-10deg); /* Aumenta ligeiramente o tamanho e rotaciona */
+  color: #2bff00; /* Muda a cor quando o mouse está sobre o texto */
+}
+
+.certeiro {
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.nav-ebook {
+  margin-left: 50px;
+}
+
+.nav-ebook a {
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  line-height: 1.2; /* Mantém a linha alinhada para evitar expansão vertical da navbar */
+  font-weight: bold; /* Opcional: torna o texto mais destacado */
+}
+
+.custom-img-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Define a altura para ocupar toda a altura da tela */
+  overflow: hidden; /* Esconde qualquer parte da imagem que exceda o contêiner */
+}
+
+.custom-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra todo o contêiner sem distorcer */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#buyNowButton {
+  position: absolute; /* Posicionamento absoluto em relação ao seu contêiner relativo */
+  top: 73%; /* Ajuste conforme necessário para alinhar verticalmente */
+  left: 46%; /* Ajuste conforme necessário para alinhar horizontalmente */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centraliza o botão exatamente onde você deseja */
+  background-color: #00c853; /* Cor de fundo verde */
+  color: white; /* Cor do texto branco */
+  border: none; /* Sem bordas */
+  border-radius: 25px; /* Bordas arredondadas */
+  padding: 10px 20px; /* Preenchimento adequado para o botão */
+  font-size: 22px; /* Tamanho da fonte */
+  transition: transform 0.3s, background-color 0.3s; /* Transição suave para rotação e cor */
+  transform: rotate(-18deg);
+  width: 20vw;
+}
+
+#buyNowButton:hover {
+  background-color: #00e676; /* Um verde mais claro para o hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa para o hover */
+}
+
+.tagline2 {
+  position: absolute;
+  top: 19%; /* Ajuste conforme necessário */
+  left: 1%; /* Centraliza horizontalmente */
+  font-size: 15px; /* Tamanho da fonte */
+  color: #ffffff; /* Cor da fonte, ajuste conforme necessário */
+  font-weight: bold;
+  width: 30%; /* Ajuste a largura do texto dentro do contêiner */
+  text-align: center;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  #buyNowButton {
+    top: 58%; /* Suba o botão para ficar mais visível */
+    left: 58%; /* Centralize o botão na tela */
+    transform: translate(-50%, -50%) rotate(-15deg); /* Remova a rotação e centralize corretamente */
+    width: 28%; /* Ajuste a largura para caber melhor na tela */
+    font-size: 14px; /* Ajuste o tamanho da fonte para telas menores */
+    padding: 10px 15px; /* Ajuste o preenchimento para manter a proporção */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Coloca a navbar no topo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Mantém a largura em 100% */
+  }
+
+  body {
+    padding-top: 70px; /* Adicione um padding-top ao corpo para evitar que o conteúdo seja escondido atrás da navbar */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    width: 100%; /* Assegura que o navbar-nav ocupe toda a largura disponível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+  }
+
+  .nav-ebook {
+    margin-left: 0;
+  }
+
+  .nav-link {
+    width: 100%; /* Garante que o link ocupe a largura total */
+    text-align: center; /* Centraliza o texto dentro do link */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-img-container img {
+    width: 100%;
+    height: 77%;
+    object-fit: cover; /* Garante que a imagem cubra todo o contêiner sem distorcer */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .tagline2 {
+    top: 12%; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    font-size: 15px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor da fonte, ajuste conforme necessário */
+    font-weight: bold;
+    width: 30%; /* Ajuste a largura do texto dentro do contêiner */
+    text-align: center;
+    background-color: #000;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 991px) {
+  .tagline2 {
+    top: 12%; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    font-size: 15px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor da fonte, ajuste conforme necessário */
+    font-weight: bold;
+    width: 30%; /* Ajuste a largura do texto dentro do contêiner */
+    text-align: center;
+    background-color: #000;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tagline2 {
+    top: 10%; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor da fonte, ajuste conforme necessário */
+    font-weight: bold;
+    width: 30%; /* Ajuste a largura do texto dentro do contêiner */
+    text-align: center;
+    background-color: #000;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  #buyNowButton {
+    top: 75%; /* Suba o botão para ficar mais visível */
+    left: 56%; /* Centralize o botão na tela */
+    transform: translate(-50%, -50%) rotate(-15deg); /* Remova a rotação e centralize corretamente */
+    width: 20%; /* Ajuste a largura para caber melhor na tela */
+    font-size: 18px; /* Ajuste o tamanho da fonte para telas menores */
+    padding: 10px 15px; /* Ajuste o preenchimento para manter a proporção */
+  }
+}
+
+@media (max-width: 600px) {
+  .tagline2 {
+    top: 5%; /* Ajuste conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor da fonte, ajuste conforme necessário */
+    font-weight: bold;
+    width: 30%; /* Ajuste a largura do texto dentro do contêiner */
+    text-align: center;
+    background-color: #000;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 486px) {
+  .tagline2 {
+    top: 5%; /* Ajuste conforme necessário */
+    left: 40%; /* Centraliza horizontalmente */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor da fonte, ajuste conforme necessário */
+    font-weight: bold;
+    width: 45%; /* Ajuste a largura do texto dentro do contêiner */
+    text-align: center;
+    background-color: #000;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 250px;
+  }
+}
